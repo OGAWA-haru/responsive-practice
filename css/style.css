@@ -5,6 +5,7 @@
   margin: 0 auto;
 }
 
+/*Q1サイズ変更*/
 .size_box {
   margin: 0 auto;
   width: 400px;
@@ -12,11 +13,14 @@
   background: #ff0000;
 }
 
+/*Q2以降のBOXサイズ*/
 .re_box {
   width: 300px;
   height: 300px;
+  position: relative;
 }
 
+/*Q2 色変更*/
 .color_change {
   background: #ff0000;
   margin: 0 auto;
@@ -27,20 +31,18 @@
   justify-content: center;
 }
 
+/*Q3 margin値変更*/
 .margin_change:not(:first-child) {
   margin-left: 150px;
 }
 
+/*Q4 float解除*/
 .float_box {
   width: 600px;
   margin: 0 auto;
 }
 
-.AAA {
-  float: left;
-}
-
-.BBB {
+.AAA, .BBB {
   float: left;
 }
 
@@ -50,10 +52,7 @@
   clear: both;
 }
 
-.A, .B, .C {
-  position: relative;
-}
-
+/*Q5・Q6 テキスト位置（絶対値）*/
 .t_layout {
   position: absolute;
   top: 50%;
@@ -61,6 +60,16 @@
   transform:translate(-50%,-50%);
 }
 
+/*Q7 要素の表示・非表示*/
+.vi_boxA, .vi_boxC {
+  display: block;
+}
+
+.vi_boxB{
+  display: none;
+}
+
+/*ボックスカラー*/
 .red-box {
   background: #ff0000;
 }
@@ -88,3 +97,43 @@
 .pink-box {
   background: #ff00e1;
 }
+
+/* -----960px以下に適用される----- */
+@media screen and (max-width: 960px) {
+  .size_box {
+    width: 200px;
+    height: 200px;
+  }
+
+  .color_change {
+    background: #007bff;
+  }
+
+  .margin_change:not(:first-child) {
+    margin-left: 50px;
+  }
+
+  .AAA, .BBB {
+    float: none;
+  }
+
+  .re_change {
+    flex-direction: row-reverse;
+  }
+
+  .order_change .lightgreen-box {
+    order: 1;
+  }
+
+  .order_change .yellow-box {
+    order: 2;
+  }
+
+  .vi_boxB {
+    display: block;
+  }
+
+  .vi_boxA{
+    display: none;
+  }
+  }
