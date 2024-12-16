@@ -65,19 +65,23 @@
 }
 
 .order_change .lightgreen-box {
-  order: -2;
+  order: 1;
 }
 
 .order_change .yellow-box {
-  order: -1;
+  order: 2;
+}
+
+.order_change .pink-box {
+  order: 3;
 }
 
 /*Q7 要素の表示・非表示*/
-.vi_boxA, .vi_boxC {
+.vi_box_a, .vi_box_c {
   display: block;
 }
 
-.vi_boxB{
+.vi_box_b{
   display: none;
 }
 
@@ -133,19 +137,15 @@
     flex-direction: row-reverse;
   }
 
-  .order_change .lightgreen-box {
-    order: 1;
+  .order_change .pink-box {
+  order: -1;
   }
 
-  .order_change .yellow-box {
-    order: 2;
-  }
-
-  .vi_boxB {
+  .vi_box_b {
     display: block;
   }
 
-  .vi_boxA{
+  .vi_box_a{
     display: none;
   }
   }
