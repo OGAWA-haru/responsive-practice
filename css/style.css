@@ -60,6 +60,18 @@
   transform:translate(-50%,-50%);
 }
 
+.re_change {
+  flex-direction: row;
+}
+
+.order_change .lightgreen-box {
+  order: -2;
+}
+
+.order_change .yellow-box {
+  order: -1;
+}
+
 /*Q7 要素の表示・非表示*/
 .vi_boxA, .vi_boxC {
   display: block;
